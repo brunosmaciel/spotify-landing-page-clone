@@ -1,0 +1,13 @@
+{
+    "folders": [
+		{
+			"path": "../.."
+		},
+		{
+			"path": "../../../cursoWebDev/ devchallenge/selfcare-master"
+		}
+	],
+    "settings": {
+        "liveServer.settings.multiRootWorkspaceName": "brunosmaciel.github.io"
+    }
+}

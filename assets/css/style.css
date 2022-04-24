@@ -1,0 +1,746 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: var(--white-color);
+    font-family: Circular, Helvetica, Arial, sans-serif;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+u {
+    cursor: pointer;
+}
+
+:root {
+    --black-color: #000000;
+    --pink-color: #993399;
+    --green-color: #1ed760;
+    --sapphire-color: #2941ab;
+    --white-color: #fff;
+    --margin-bottom: 3.5rem;
+    --li-title-color: #919496;
+}
+
+[disabled] {
+    overflow-y: hidden;
+}
+
+.menu-toggle,
+.menu-toggle-label {
+    display: none;
+}
+
+.svg-mobile-none svg {
+    display: none;
+}
+
+.global-hover:hover {
+    color: var(--green-color);
+}
+
+.heading {
+    width: 100%;
+    height: 8rem;
+    background-color: var(--black-color);
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+.heading>div {
+    background-color: var(--black-color);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-buttons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+}
+
+.menu-buttons li {
+    padding-right: 2.5rem;
+}
+
+.menu-buttons li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    z-index: 1;
+}
+
+.main-content {
+    max-width: 120rem;
+    margin: 0 auto;
+    height: 100%;
+}
+
+.main-content svg {
+    height: auto;
+    width: auto;
+    margin-top: 2rem;
+    cursor: pointer;
+}
+
+.main-section {
+    width: 100%;
+    min-height: 90vh;
+    background-color: var(--pink-color);
+}
+
+.main-section .main-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+    font-family: inherit;
+}
+
+.main-section-img {
+    width: 40rem;
+    height: 40rem;
+    display: flex;
+    background-color: rebeccapurple;
+    justify-content: center;
+    align-items: center;
+    background-image: url('/assets/img/main-bg-img.jpeg');
+    background-size: contain;
+    margin-top: 10rem;
+}
+
+.main-section-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+p {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    justify-self: flex-start;
+    margin: 8rem 0 5rem 0;
+    font-weight: 900;
+}
+
+h1 {
+    font-size: 6rem;
+    justify-self: center;
+    margin-bottom: var(--margin-bottom);
+}
+
+h2 {
+    display: inline-block;
+    font-size: 2.4rem;
+    font-weight: 400;
+    text-align: start;
+    width: 100%;
+}
+
+.btn-enjoy-3months {
+    height: 12rem;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: f;
+}
+
+.btn-enjoy-3months a {
+    background-color: var(--black-color);
+    border-radius: 3rem;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 1.6rem 3.1rem;
+    text-decoration: none;
+    font-weight: 900;
+    transition: all 100ms ease-in-out;
+}
+
+.btn-enjoy-3months a:hover {
+    transform: scale(1.05);
+}
+
+.secondary-section {
+    width: 100%;
+    height: 60rem;
+    background-image: url(/assets/img/secondary-section-bg.svg);
+    background-position: center;
+    background-size: cover;
+    background-color: var(--sapphire-color);
+    color: var(--green-color);
+}
+
+.secondary-section-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    width: 50%;
+    height: 50rem;
+}
+
+.secondary-section-text p,
+.secondary-section-text h1,
+.secondary-section-text h2 {
+    color: var(--green-color);
+    margin-bottom: var(--margin-bottom);
+}
+
+.btn-dowload-spotify {
+    height: 12rem;
+    width: 30rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-dowload-spotify a {
+    background-color: var(--green-color);
+    border-radius: 3rem;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    padding: 1.6rem 3.1rem;
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--sapphire-color);
+}
+
+.btn-dowload-spotify a:hover {
+    font-size: 1.45rem;
+    padding: 1.7rem 3.3rem;
+}
+
+.main-footer {
+    width: 100%;
+    height: 53rem;
+    background-color: var(--black-color);
+}
+
+.main-footer .main-content {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+.footer-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.main-footer li {
+    list-style: none;
+}
+
+.footer-logo svg {
+    fill: var(--white-color);
+    width: 13rem;
+    height: 4rem;
+}
+
+.footer-li-titulo {
+    color: var(--li-title-color);
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.social-media-icons {
+    display: flex;
+    flex-direction: row;
+}
+
+#social-media-icons li {
+    padding: 0;
+    margin-left: 1.2rem;
+}
+
+.social-media-icons li {
+    background-color: #222326;
+    width: 5.4rem;
+    height: 5.4rem;
+    border-radius: 3rem;
+}
+
+.social-media-icons li a {
+    display: flex;
+    width: 54px;
+    height: 54px;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-icons li a span {
+    display: flex;
+    width: 54px;
+    height: 54px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-media-icons li a span:hover svg path {
+    fill: var(--green-color);
+}
+
+.social-media-icons path {
+    fill: var(--white-color);
+}
+
+.social-media-icons svg {
+    margin: 0;
+}
+
+.select-region {
+    width: 100%;
+    height: 1.6rem;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+    color: var(--li-title-color);
+    align-self: flex-end;
+}
+
+.links-bottom-footer {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.links-bottom-footer span {
+    font-size: 1.2rem;
+    color: var(--li-title-color);
+}
+
+.links-bottom {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.links-bottom a {
+    text-decoration: none;
+    font-size: 1.2rem;
+    color: var(--li-title-color);
+}
+
+.link-style li a {
+    text-decoration: none;
+    font-size: 1.6rem;
+    z-index: 1;
+}
+
+.fa-globe {
+    font-size: 1.2rem;
+    color: var(--li-title-color);
+    cursor: pointer;
+}
+
+.footer-header ul li {
+    padding: 1rem 0;
+}
+
+.footer-header ul {
+    margin-top: 7rem;
+}
+
+.footer-header span {
+    margin-top: 4rem;
+}
+
+@media(max-width:1200px) {
+    .main-content {
+        max-width: 1000px;
+    }
+    .main-section .main-content {
+        grid-template-columns: 1fr;
+    }
+    .main-section-img {
+        margin: 5rem auto;
+    }
+    .secondary-section-text {
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        justify-content: center;
+        align-items: stretch;
+    }
+    .secondary-section {
+        display: flex;
+        background-image: url("https://content-tooling.spotifycdn.com/images/af63e367-ad10-4063-a8e2-5a50ae2a4b28_lie_circles-mobile.svg");
+        background-size: cover;
+        background-position: center;
+    }
+    .btn-dowload-spotify {
+        margin: 0 auto;
+    }
+}
+
+@media(max-width:991px) {
+    .main-content {
+        max-width: 100rem;
+    }
+    .menu-buttons {
+        background-color: var(--black-color);
+        position: fixed;
+        top: 0;
+        right: -50px;
+        display: block;
+        height: 100vh;
+        width: 0;
+        z-index: 2;
+        transition: .25s;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    .menu-buttons li {
+        position: relative;
+        right: -100rem;
+        padding: 2rem 0;
+    }
+    .menu-toggle-label {
+        display: inline-block;
+        cursor: pointer;
+        /* position: absolute;
+        top: 0.8rem;
+        right: 5rem; */
+        z-index: 3;
+        margin: 0 2rem;
+    }
+    .menu-toggle:checked~.menu-buttons {
+        right: 0;
+        width: 50vw;
+        padding: 0 3rem;
+        height: 100vh;
+    }
+    .menu-toggle:checked~.menu-buttons::after {
+        content: '';
+        width: 100vw;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+        background: rgba(0, 0, 0, .75);
+        transition-delay: none;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(1) {
+        right: 0;
+        transition: all 500ms ease-in-out;
+        font-size: 3.6rem;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(2) {
+        right: 0;
+        transition: all 525ms ease-in-out;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(3) {
+        right: 0;
+        transition: all 550ms ease-in-out;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(4) {
+        right: 0;
+        transition: all 575ms ease-in-out;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(5) {
+        right: 0;
+        transition: all 600ms ease-in-out;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(6) {
+        right: 0;
+        transition: all 625ms ease-in-out;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(7) {
+        right: 0;
+        transition: all 650ms ease-in-out;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(1) a,
+    .menu-toggle:checked~.menu-buttons li:nth-child(2) a,
+    .menu-toggle:checked~.menu-buttons li:nth-child(3) a {
+        font-size: 3.6rem;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(7) {
+        margin-top: 12rem;
+    }
+    .svg-mobile svg {
+        height: 2.7rem;
+        width: 8.9rem;
+        margin: auto 0;
+        display: block;
+    }
+    .heading {
+        height: 5rem;
+    }
+    .bar1,
+    .bar2,
+    .bar3 {
+        width: 2.5rem;
+        height: 0.3rem;
+        background-color: #fff;
+        margin: 6px 0;
+        transition: 0.4s;
+    }
+    .change .bar1 {
+        -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+        transform: rotate(-45deg) translate(-9px, 6px);
+    }
+    .change .bar2 {
+        opacity: 0;
+    }
+    .change .bar3 {
+        -webkit-transform: rotate(45deg) translate(-8px, -8px);
+        transform: rotate(45deg) translate(-8px, -5px);
+    }
+}
+
+@media(max-width:768px) and (min-width:481px) {
+    .main-content {
+        max-width: 730px;
+    }
+    p {
+        align-self: center;
+    }
+    h1 {
+        font-size: 3.6rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .main-section-text span {
+        font-size: 1.2rem;
+    }
+    .main-section-img {
+        width: 36rem;
+        height: 36rem;
+    }
+    .btn-enjoy-3months,
+    .btn-enjoy-3months a {
+        width: 100%;
+        text-align: center;
+    }
+    .secondary-section {
+        background-image: url('https://content-tooling.spotifycdn.com/images/af63e367-ad10-4063-a8e2-5a50ae2a4b28_lie_circles-mobile.svg');
+        background-position: 65% 55%;
+        background-size: auto 177%;
+        background-repeat: no-repeat;
+    }
+    .main-content-flex {
+        max-height: 40rem;
+    }
+    .secondary-section-text {
+        height: 100%;
+    }
+    .main-footer {
+        height: auto;
+    }
+    .footer-header {
+        flex-direction: column;
+    }
+    .footer-footer {
+        justify-content: flex-end;
+    }
+    .social-media-icons li {
+        width: 44px;
+        height: 44px;
+    }
+    .social-media-icons li a {
+        width: 100%;
+        height: 100%;
+    }
+    /* MENU MOBILE */
+    .menu-buttons {
+        flex-wrap: nowrap;
+    }
+    .menu-toggle:checked~.menu-buttons {
+        width: 44.7rem;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(4) {
+        transform: rotate(90deg);
+        margin-left: 1rem;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(7) {
+        margin-top: 4rem;
+    }
+    .svg-mobile svg {
+        height: 2.7rem;
+        width: 8.9rem;
+        display: block;
+    }
+}
+
+@media(max-width:480px) and (min-width:321px) {
+    .main-content {
+        max-width: 450px;
+    }
+    p {
+        align-self: center;
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 3.2rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .main-section-text span {
+        font-size: 1.2rem;
+    }
+    .main-section-text p {
+        margin-top: 3.5rem;
+    }
+    .main-section-img {
+        width: 32rem;
+        height: 32rem;
+    }
+    .btn-enjoy-3months,
+    .btn-enjoy-3months a {
+        width: 100%;
+        text-align: center;
+    }
+    .secondary-section {
+        background-image: url('https://content-tooling.spotifycdn.com/images/af63e367-ad10-4063-a8e2-5a50ae2a4b28_lie_circles-mobile.svg');
+        background-position: 65% 55%;
+        background-size: auto 177%;
+        background-repeat: no-repeat;
+    }
+    .main-content-flex {
+        max-height: 40rem;
+    }
+    .secondary-section-text {
+        height: 100%;
+    }
+    .main-footer {
+        height: auto;
+    }
+    .footer-header {
+        flex-direction: column;
+    }
+    .footer-footer {
+        justify-content: flex-end;
+    }
+    .social-media-icons li {
+        width: 44px;
+        height: 44px;
+    }
+    .social-media-icons li a {
+        width: 100%;
+        height: 100%;
+    }
+    .links-bottom {
+        flex-wrap: wrap;
+    }
+    .menu-buttons {
+        flex-wrap: nowrap;
+    }
+    .menu-toggle:checked~.menu-buttons {
+        width: 90vw;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(4) {
+        transform: rotate(90deg);
+        margin-left: 1rem;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(7) {
+        margin-top: 4rem;
+    }
+    .svg-mobile svg {
+        height: 2.7rem;
+        width: 8.9rem;
+        display: block;
+    }
+}
+
+@media(max-width:329px) and (min-width: 0px) {
+    .main-content {
+        max-width: 310px;
+    }
+    p {
+        align-self: center;
+        font-size: 1rem;
+    }
+    h1 {
+        font-size: 2.4rem;
+    }
+    h2 {
+        font-size: 1.8rem;
+    }
+    .main-section-text span {
+        font-size: 1.2rem;
+    }
+    .main-section-text p {
+        margin-top: 3.5rem;
+    }
+    .main-section-img {
+        width: 29rem;
+        height: 29rem;
+    }
+    .btn-enjoy-3months,
+    .btn-enjoy-3months a {
+        width: 97%;
+        text-align: center;
+    }
+    .secondary-section {
+        background-image: url('https://content-tooling.spotifycdn.com/images/af63e367-ad10-4063-a8e2-5a50ae2a4b28_lie_circles-mobile.svg');
+        background-position: 65% 55%;
+        background-size: auto 177%;
+        background-repeat: no-repeat;
+    }
+    .main-content-flex {
+        max-height: 40rem;
+    }
+    .secondary-section-text {
+        height: 100%;
+    }
+    .main-footer {
+        height: auto;
+    }
+    .footer-header {
+        flex-direction: column;
+    }
+    .footer-footer {
+        justify-content: flex-end;
+    }
+    .social-media-icons li {
+        width: 44px;
+        height: 44px;
+    }
+    .social-media-icons li a {
+        width: 100%;
+        height: 100%;
+    }
+    .links-bottom {
+        flex-wrap: wrap;
+    }
+    .menu-toggle-label {
+        margin: 0 0.5rem;
+    }
+    .menu-toggle:checked~.menu-buttons {
+        width: 100%;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(1) a,
+    .menu-toggle:checked~.menu-buttons li:nth-child(2) a,
+    .menu-toggle:checked~.menu-buttons li:nth-child(3) a {
+        font-size: 3rem;
+    }
+    .menu-toggle:checked~.menu-buttons li:nth-child(4) a,
+    .menu-toggle:checked~.menu-buttons li:nth-child(5) a,
+    .menu-toggle:checked~.menu-buttons li:nth-child(6) a {
+        font-size: 2.4rem;
+        color: var(--li-title-color);
+    }
+    .menu-buttons {
+        justify-content: space-evenly;
+    }
+    .menu-buttons li {
+        padding: 0.5rem 0;
+    }
+}
